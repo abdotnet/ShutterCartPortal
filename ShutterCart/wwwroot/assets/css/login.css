@@ -1,0 +1,98 @@
+﻿html, body {
+    height: 100%;
+    width:98%;
+    margin: 0;
+}
+
+.brand {
+    font-size: 60px;
+    text-align: center;
+}
+
+#toast-container {
+    margin-top: 5px;
+}
+
+div[data-loader] {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #808080;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    display: none;
+    z-index: 1100;
+    text-align: center;
+}
+
+.left {
+    height: 100%;
+    width: 74%;
+    float: left;
+    background-color: rgb(220,220,220);
+    /*background-image: url("/Content/img/pay-atm.jpg");*/
+    background-position: center center;
+    background-size: cover;
+}
+
+.right {
+    margin-top: 80px;
+    height: 100%;
+    width: 24%;
+    float: right;
+}
+
+    .right .container-fluid {
+        /*position: relative;*/
+        top: 20%;
+        transform: translateY(-40%)
+    }
+
+.loginfooter {
+    font-size: 14px;
+    text-align: center;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100% !important;
+        float: none;
+    }
+
+    /*.left {
+        width: 20%;
+    }
+
+    .right {
+        width: 80%;
+    }*/
+}
+
+@media (max-width: 991px) {
+    .left {
+        width: 40%;
+    }
+
+    .right {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .left {
+        width: 50%;
+    }
+
+    .right {
+        width: 50%;
+    }
+}
+

@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>shuttercart</name>
+    </assembly>
+    <members>
+        <member name="M:shuttercart.Controllers.Api.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.AccountController},Microsoft.AspNetCore.Identity.SignInManager{shuttercart.Core.Models.UserModel},Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration,shuttercart.Data.Repository.IUserRepository,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="signInManager"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.AccountController.ForgetPassword(System.String)">
+            <summary>
+            Forget password ..
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.AccountController.UpdatePassword(shuttercart.Core.Models.RecoverPassword)">
+            <summary>
+            Update password reset ..
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.AdvertController.#ctor(shuttercart.Core.Interfaces.IAdvertService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.AdvertController},AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:shuttercart.Controllers.Api.ApiController">
+            <summary>
+            Api controller 
+            </summary>
+        </member>
+        <member name="P:shuttercart.Controllers.Api.ApiController.UserId">
+            <summary>
+            Get user id  ..
+            </summary>
+        </member>
+        <member name="T:shuttercart.Controllers.Api.CategoryController">
+            <summary>
+            Category controller ...
+            </summary>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,shuttercart.Core.Services.ICategoryService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.CategoryController},AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Category controller 
+            </summary>
+            <param name="env"></param>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.Get">
+            <summary>
+            Get category  ..
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.Get(System.Int64)">
+            <summary>
+            Get category by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.GetCategory(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Get category with pagination.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.Upload(System.Int64)">
+            <summary>
+            Upload file with Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.Post(shuttercart.Core.Models.CategoryModel)">
+            <summary>
+            Post category model
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.CategoryController.DeleteCategory(System.Int32)">
+            <summary>
+            Delete category  by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.DashboardController.#ctor(shuttercart.Core.Interfaces.IDashboardService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.DashboardController})">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="T:shuttercart.Controllers.Api.ProductController">
+            <summary>
+            Product controller  ...
+            </summary>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.#ctor(shuttercart.Core.Interfaces.IProductService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.ProductController},Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="userManager"></param>
+            <param name="mapper"></param>
+            <param name="env"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.Get">
+            <summary>
+            Get products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.Get(System.Int64)">
+            <summary>
+             Get Products
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.GetProductByCategory(System.Int64)">
+            <summary>
+            Get product by category id
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.GetProducts(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Get products by paging ...
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.Upload(System.Int64)">
+            <summary>
+            Upload product image ..
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.UploadAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload file  ..
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.Post(shuttercart.Core.Models.ProductModel)">
+            <summary>
+             Create product manager  ..
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ProductController.Delete(System.Int32)">
+            <summary>
+             Delete id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.QuestionController.#ctor(shuttercart.Core.Interfaces.IQuestionService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.QuestionController},AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,shuttercart.Core.Interfaces.IReceiptService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.ReceiptController},AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.Get">
+            <summary>
+            Get receipt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.Get(System.Int64)">
+            <summary>
+             Get receipt by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.GetReceiptByUserId(System.Int64)">
+            <summary>
+            Get receipt for user by id 
+            </summary>
+            <param name="receiptId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.GetUserReceiptById(System.Int64)">
+            <summary>
+            Get user by receipt id 
+            </summary>
+            <param name="receiptId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.GetReceipt(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Get receipt  ..
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.Post(shuttercart.Core.Models.ReceiptModel)">
+            <summary>
+            post receipt information ..
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.PostReceiptPoint(shuttercart.Core.Models.ReceiptModel)">
+            <summary>
+             Post user point 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReceiptController.Delete(System.Int32)">
+            <summary>
+             Delete receipt by user Id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.WalletReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Wallet reports
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.SharedPointReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Share point report 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.VideoPointReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Video point report
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.SurveyPointReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            product Survey point report 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.ReceiptPointReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            Receipt point report 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.ReportController.RegisteredReport(shuttercart.Core.Models.SearchModel)">
+            <summary>
+            User point report 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.VideoController.PostVideoFromMobile(shuttercart.Core.Models.VideoModel)">
+            <summary>
+             Post from mobile ..
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:shuttercart.Controllers.Api.WalletController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.WalletController.#ctor(shuttercart.Core.Interfaces.IWalletService,Microsoft.Extensions.Logging.ILogger{shuttercart.Controllers.Api.WalletController},AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{shuttercart.Core.Models.UserModel},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="config"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:shuttercart.Controllers.Api.WalletController.GetPointsByUser(System.Int64)">
+            <summary>
+            Get list of points by user 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Infrastructures.Extension.ClaimsExtension.GetUserId(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Infrastructures.Extension.Extension.Assign``1(``0,System.Object,System.String[])">
+            <summary>
+            Update properties with properties of the object Supplied (typically anonymous)
+            </summary>
+            <typeparam name="T">Type of Source Object</typeparam>
+            <param name="destination">Object whose property you want to update</param>
+            <param name="source">destination object (typically anonymous) you want to take values from</param>
+            <returns>Update reference to same Object</returns>
+        </member>
+        <member name="M:shuttercart.Core.Infrastructures.Pagination`1.AdjacentIndexes(System.Int32)">
+            <summary>
+            Returns an array containing page indexes for pages immediately adjecent to the current page.
+            The span indicates how many pages indexes to each side of the current page should be returned
+            </summary>
+            <param name="span"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Interfaces.IReportService.GetRegisteredUsers(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Interfaces.IReportService.GetWalletPoints(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Interfaces.IReportService.GetChannelPoints(shuttercart.Data.Entity.PointChannel,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Interfaces.IReportService.GetReceipts(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Services.QuestionService.GetQuestions(System.Int32)">
+            <summary>
+            Filter questions ...
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Services.ReportService.#ctor(Microsoft.Extensions.Logging.ILogger{shuttercart.Core.Services.ReportService},shuttercart.Data.ShutterCartContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:shuttercart.Core.Services.ReportService.GetRegisteredUsers(System.String,System.Int32,System.Int32)">
+            <summary>
+             Get registered users..
+            </summary>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Services.ReportService.GetWalletPoints(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get user information by diff channel ..
+            </summary>
+            <param name="search"></param>
+            <param name="channel"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Services.ReportService.GetChannelPoints(shuttercart.Data.Entity.PointChannel,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get channel point reports
+            </summary>
+            <param name="channel"></param>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Core.Services.ReportService.GetReceipts(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get receipts
+            </summary>
+            <param name="search"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="pointValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:shuttercart.Data.Entity.PointChannel">
+            <summary>
+            Where the points are comming from  .. 
+            </summary>
+        </member>
+        <member name="M:shuttercart.Data.Repository.UserRepository.ValidateUser(System.String,System.String)">
+            <summary>
+             Validate User ...
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:shuttercart.Data.Repository.UserRepository.SendEmails(System.String,System.String,System.String)">
+            <summary>
+            Send sms module 
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
